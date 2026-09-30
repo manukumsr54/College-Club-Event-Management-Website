@@ -1,7 +1,14 @@
 import axios from 'axios';
 
+// Resolve API base URL:
+// - In single unified Vercel deployment: defaults to '/api' (same origin)
+// - In separate frontend deployment: uses VITE_API_URL (e.g. https://your-backend.vercel.app/api)
+// - In local development: defaults to '/api' (proxied by Vite to http://localhost:5000)
+const rawBaseURL = import.meta.env.VITE_API_URL;
+const baseURL = rawBaseURL && rawBaseURL.trim() ? rawBaseURL.trim().replace(/\/+$/, '') : '/api';
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api',
+  baseURL,
   headers: {
     'Content-Type': 'application/json',
   },

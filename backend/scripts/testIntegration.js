@@ -2,7 +2,7 @@
 // Verifies all public student flows, PostgreSQL transactions, duplicate checks, admin authentication, event CRUD, and registration management.
 
 async function runTestSuite() {
-  const baseURL = 'http://localhost:5000/api';
+  const baseURL = (process.env.TEST_API_URL || 'http://localhost:5000/api').replace(/\/+$/, '');
   let passed = 0;
   let failed = 0;
 

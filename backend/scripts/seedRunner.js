@@ -17,9 +17,11 @@ async function runSeed() {
     await pool.query(seedSql);
     console.log('Database seeded successfully with initial events, registrations, and admin.');
 
+    await pool.end();
     process.exit(0);
   } catch (err) {
     console.error('Error during database seed/migration:', err);
+    await pool.end().catch(() => {});
     process.exit(1);
   }
 }
