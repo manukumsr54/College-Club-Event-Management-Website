@@ -1,0 +1,14 @@
+{
+  "name": "college-club-events",
+  "version": "1.0.0",
+  "description": "Full-stack College Club Event Management Website",
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "seed": "npm --prefix backend run seed",
+    "start": "npm --prefix backend start"
+  },
+  "keywords": ["college", "club", "events", "full-stack", "react", "node", "express", "postgresql"],
+  "author": "College Club Tech Team",
+  "license": "MIT"
+}
