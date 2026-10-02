@@ -1,6 +1,6 @@
 # CodeChef Student Chapter — College Event Management Website
 
-A modern, full-stack event discovery, registration, and chapter administration platform built with **React.js**, **Node.js**, **Express.js**, **Tailwind CSS**, and **PostgreSQL**.
+A modern , full-stack event discovery, registration, and chapter administration platform built with **React.js**, **Node.js**, **Express.js**, **Tailwind CSS**, and **PostgreSQL**.
 
 ---
 
